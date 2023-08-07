@@ -1,0 +1,33 @@
+@use './partials/highlights.scss';
+@use './partials/hero.scss';
+@use './partials/about.scss';
+@use './partials/testimonials.scss';
+
+@use './sass-variables.scss' as v;
+
+
+#home {
+  .title {
+    font-size: 4.5rem;
+    line-height: 3.5rem;
+    margin: 1.2rem 0 0;
+  }
+  .subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .text {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: v.$media_break_point_min) {
+  main {
+    .content-wrapper {
+      margin: 0 auto;
+      padding: 2rem 0;
+
+      max-width: v.$desktop_content_max_width;
+    }
+  }
+}

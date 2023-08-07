@@ -1,0 +1,167 @@
+
+@use '../sass-variables.scss' as v;
+#highlights {
+  padding-bottom: 80px;
+  
+  #carousel {
+    width: 885px;
+  }
+
+  .section-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+   .section-title-wrapper .title {
+    margin: 1.2rem 0;
+  }
+  
+   .card {
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+  }
+   .card .card-title {
+    font-family: Markazi Text;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%;
+  
+    margin-bottom: 0;
+  }
+   .card .card-text{
+    color: var(--color-brand-primary);
+    font-weight: 500;
+  }
+   .card .card-price {
+    width: 4rem;
+    color: var(--color-brand-secondary);
+    text-align: right;
+    font-weight: bold;
+  }
+   .card .order {
+    padding-bottom: 1em;
+  }
+   .card .content {
+    padding-top: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: -10px;
+    background-color: var(--color-brand-gray-light);
+    height: 70%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+   .card .image {
+    position: relative;
+    z-index: 1;
+  }
+   .card img {
+    width: 100%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+/*-----------------------------------------------*/
+  .wrapper-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+  .order-delivery {
+    border: none;
+    height: 1.75rem;
+    padding: 0px 10px ;
+    font-weight: 700;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin-left: -10px;
+    height: 35px;
+  }
+  .order-delivery span {
+    padding-right: 10px;
+  }
+  .order-delivery span,
+  .order-delivery svg {
+    vertical-align: middle;
+  }
+  .order-delivery:hover{
+    border: 2px solid var(--color-theme-call-to-action);
+    box-shadow: 2px 2px 8px 2px #00000038;
+  }
+  .order-delivery:hover span {
+    color: var(--color-theme-call-to-action);
+  }
+  .order-delivery:hover svg path {
+    fill: var(--color-theme-call-to-action);
+  }
+  
+  .react-slideshow-container .images-wrap>div {
+    display: flex !important;
+  }
+  .react-slideshow-container button.nav.default-nav {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+    transition: all 0.3s;
+  }
+  .react-slideshow-container button.nav.default-nav {
+    background-color: var(--color-brand-secondary);
+    fill: var(--color-text-invert);
+  }
+  
+  .react-slideshow-container button.nav.default-nav:hover {
+    background-color: var(--color-theme-call-to-action);
+    fill: var(--color-text-invert);
+  }
+  
+  .react-slideshow-container button.nav.default-nav.disabled{
+    background-color: var(--color-brand-gray-light);
+    fill: var(--color-text-invert);
+  }
+  .react-slideshow-container button[data-type="prev"] {
+    top: -65px;
+    
+  }
+  .react-slideshow-container button svg{
+    margin: 1px;
+  }
+  .react-slideshow-container button[data-type="next"]{
+    margin-left: -30px;
+    top: -65px;
+    left: 55px;
+  }
+}
+
+@media all and (max-width: v.$media_break_point_max) {
+  #highlights {
+    padding-bottom: 40px;
+    
+    .section-title-wrapper {
+      flex-flow: column;
+
+      .btn-page {
+        align-self: end;
+      }
+    }
+
+    .content-wrapper {
+      padding: 4em v.$mobile_padding-lr 2em;
+    }
+
+    #carousel {
+      width: 99%;
+
+      .card {
+        width: 90%;
+      }
+  }
+}
+}
+
+  

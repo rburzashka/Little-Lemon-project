@@ -1,0 +1,55 @@
+@use '../sass-variables.scss' as v;
+
+#about {
+  padding: 80px 0;
+  
+  .title {
+    color: var(--color-brand-primary-1);
+  }
+  .content-wrapper:not(.wrapper-m) {
+    display: flex;
+    gap: 25px;
+      img {
+        width: 66.5%;
+      }
+      img:first-child {
+        left: 0;
+        top: 130px;
+        z-index: 1;
+    
+        position: relative;
+        margin-bottom: 130px;
+      }
+      img:last-child {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        z-index: 0;
+      }
+      &>div {
+        width: 50%;
+        position: relative;
+      }
+    }
+
+   
+  
+ }
+ @media all and (max-width: v.$media_break_point_max) {
+  #about {
+    padding: 40px 0;
+
+    .content-wrapper {
+      .content>*:not(.image){
+        padding: 0em v.$mobile_padding-lr;
+      }
+
+      &.wrapper-m {
+        img {
+          width: 100%;
+        }
+      }
+    }
+    
+  }
+}

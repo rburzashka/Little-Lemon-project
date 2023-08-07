@@ -1,0 +1,100 @@
+@use '../sass-variables.scss' as v;
+
+#hero {
+    background-color: var(--section-bgr-colored);
+}
+
+@media all and (min-width: v.$media_break_point_min) {
+  #hero {
+    margin-bottom: 90px;
+
+    .title {
+      font-size: 5rem;
+      margin: 1.2rem auto 0;
+      line-height: 3.5rem;
+    }
+    .subtitle {
+      color: var(--color-text-invert);
+    }
+    
+    .content-wrapper {
+      display: flex;
+      gap: 25px;
+      align-items: flex-start;
+
+      &>div {
+        width: 50%;
+        position: relative;
+      }
+    }
+    .image img {
+      position: absolute;
+      width: 375px;
+      max-width: 100%;
+      right: 0;
+      top: 1.5rem;
+      border-radius: 25px;
+    }
+    
+  }
+}
+
+
+@media all and (max-width: v.$media_break_point_max) {
+  #hero {
+
+    .content-wrapper {
+      display: grid;
+      grid-template-areas: 'main';
+
+      &>div {
+        grid-area: main;
+      }
+      
+      &>div:first-child {
+        position: relative;
+        z-index: 1;
+        padding: 2em v.$mobile_padding-lr 1em;
+        background-color: rgba(0,0,0,0.6);
+
+        &>* {
+          max-width: 400px;
+        }
+      }
+      &>div:last-child {
+        height: 500px;
+        overflow: hidden;
+      }
+
+      img {
+        position: relative;
+        width: 100%;
+        top: -10%;
+      }
+
+      .btn-page {
+        margin-top: 10%;
+      }
+    }
+  }
+
+  @media all and (max-width: 500px) {
+    #hero {
+      .content-wrapper {
+        &>div:last-child {
+          height: inherit;
+        }
+        &>div:last-child {
+          background-color: #000;
+          height: 567px;
+        }
+        img {
+          top: 0;
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+  

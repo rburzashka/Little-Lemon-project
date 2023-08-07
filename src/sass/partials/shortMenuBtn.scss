@@ -1,0 +1,100 @@
+@use '../sass-variables.scss' as v;
+
+
+@media all and (min-width: v.$media_break_point_min) {
+    #short-menu-btn {
+        display: none;
+    }
+}
+
+@media all and (max-width: v.$desktop_content_max_width) {
+    #short-menu-btn {
+        z-index: 101;
+        right: 92px;
+        width: 49px;
+        height: 40px;
+        border-radius: 3px;
+
+        path {
+            transform-origin: center;
+            -webkit-transition: all 0.1s;
+            transition: rotate 0.1s;
+        }
+
+        path {
+            &.translate-1 {
+                fill: var(--color-brand-primary);
+            }
+            &.translate-4 {
+                fill: var(--color-brand-primary);
+            }
+            &.rotate-2 {
+                fill: var(--color-brand-primary);
+            }
+            &.rotate-3 {
+                fill: var(--color-brand-primary);
+            }
+        }
+    }
+
+    #site-nav{
+        &.menu-opened {
+            #short-menu-btn .translate-1 {
+                -webkit-animation: translate-1 0.5s forwards;
+                animation: translate-1 0.5s forwards;
+            }
+            #short-menu-btn .rotate-2 {
+                -webkit-animation: rotate-2 0.5s forwards;
+                animation: rotate-2 0.5s forwards;
+            }
+            #short-menu-btn .rotate-3 {
+                -webkit-animation: rotate-3 0.5s forwards;
+                animation: rotate-3 0.5s forwards;
+            }
+            #short-menu-btn .translate-4 {
+                -webkit-animation: translate-4 0.5s forwards;
+                animation: translate-4 0.5s forwards;
+            }
+        }
+    }
+    
+
+    
+    @keyframes translate-1 {
+        0% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(-20px);
+        }
+    }
+
+    @keyframes rotate-2 {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @keyframes rotate-3 {
+        0% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(45deg);
+        }
+    }
+
+    @keyframes translate-4 {
+        0% {
+            transform: translateY(20px);
+        }
+        100% {
+            transform: translateY(20px);
+        }
+    }
+}
+
+
