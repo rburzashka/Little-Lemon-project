@@ -298,10 +298,11 @@ validateForm : f ()*/
                 </div>
             }
                 <div className={"form-btns " + (data.isSubmited ? 'submited' : '')}>
-                    { !data.isSubmited && <button 
-                        type="submit"  
-                        disabled={isSubmitting}
-                        className={ 'btn-form submit ' + (isValid && dirty ? '' : 'disabled')}
+                    { !data.isSubmited && 
+                        <button 
+                            type="submit"  
+                            disabled={isSubmitting}
+                            className={ 'btn-form submit ' + (isValid && dirty ? '' : 'disabled')}
                          >
                             <span>Book table</span>
                     </button>}

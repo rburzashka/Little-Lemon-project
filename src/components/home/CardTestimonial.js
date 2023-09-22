@@ -11,25 +11,25 @@ export default function CardTestimonial ({card}) {
     const Stars = starsArr[parseInt(card.stars) - 1];
 
     return(
-        <section className="card">
+        <section className="card" itemScope itemType="https://schema.org/Review">
             
-            <div className="customer-stars">
+            <div className="customer-stars" itemProp="ratingValue" title={"Rating: " + card.stars}>
                 <Stars />
             </div>
 
             <div className="customer-info">
                 <div>
-                    <img src={card.avatar} alt={card.imageAlt} />
+                    <img itemProp="image" src={card.avatar} alt={card.imageAlt} />
                 </div>
-                <div>
-                    <p> {card.firstName}</p>
-                    <p> {card.lastName}</p>
+                <div itemProp="author" itemScope itemType="https://schema.org/Person">
+                    <p itemProp="givenName"> {card.firstName}</p>
+                    <p itemProp="familyName"> {card.lastName}</p>
                     
                 </div>
             </div>
 
-            <div className="customer-review">
-                <p>{card.review}</p>
+            <div className="customer-review" itemProp="reviewBody">
+                {card.review}
             </div>
 
         </section>

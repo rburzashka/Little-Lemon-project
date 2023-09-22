@@ -78,7 +78,7 @@ export default function ReserveTable () {
     }
 
     return (
-        <main id="reserve-table" className="site-main">
+        <main id="main" className="reserve-table">
 
             <section className="content-wrapper">
                 <FormsContext.Provider value={

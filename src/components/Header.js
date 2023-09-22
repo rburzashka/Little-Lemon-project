@@ -5,12 +5,12 @@ import { ReactComponent as ShortMenu } from '../assets/icons/short-menu-1.svg';
 import React, { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
-export default function Header({children}) {
+export default function Header({responsive}) {
 
   let location = useLocation();
 
   const navContainerEl = useRef();
-  let shortMenuBtnEl = useRef();
+  let shortMenuBtn = useRef();
 
   const scrolledPosition = useRef(0);
 
@@ -32,17 +32,23 @@ export default function Header({children}) {
   const removeClassOpened = () => {
     navContainerEl.current.classList.remove("menu-opened");
     
-    if(window.getComputedStyle(shortMenuBtnEl).display === "none") {
+    if( shortMenuBtn.current && window.getComputedStyle(shortMenuBtn.current).display === "none") {
       navContainerEl.current.classList.remove("btn-visible");
     } else {
       navContainerEl.current.classList.add("btn-visible");
     }
     
   };
+
+  const changeFocus = () => {
+    //document.activeElement.blur();
+    document.body.focus();
+  }
   
   useEffect(() => {
 
     removeClassOpened();
+    changeFocus();
 
     window.addEventListener("resize", removeClassOpened);
 
@@ -96,12 +102,6 @@ export default function Header({children}) {
     return ({ isActive }) => (isActive ? "active-link" : "")
   }
 
-  const buttonRef = (node) => {
-    if(node instanceof HTMLElement) {
-      shortMenuBtnEl = node;
-    }
-  };
-
 
     return (
       <>
@@ -109,30 +109,33 @@ export default function Header({children}) {
         ref={navContainerEl} 
         id="site-nav">
           <div>
-        <nav 
+        <nav aria-label="main navigation"
           className="content-wrapper">
 
           <div id="nav-logo">
-            <Link to="/">
+            <Link aria-label="Go to Home page" to="/">
               <LogoSVG />
             </Link>
           </div>
 
-          <div
+        { responsive < 3 && 
+          <a href=""
             id="short-menu-btn" 
+            aria-label="Open menu"
             role="button" 
-            className=""
             onClick={handleMenuBtnClick} 
-            ref={buttonRef} >
+            ref={shortMenuBtn} >
                 
             <ShortMenu />		 
-	        </div>
+          </a>
+        }
+          
           
           <div className="pages-nav">
             <NavLink to="/" className={getLinkActiveClassName()} >Home</NavLink>
             <NavLink to="/about" className={getLinkActiveClassName()} >About</NavLink>
             <NavLink to="/menu" className={getLinkActiveClassName()} >Menu</NavLink>
-            <NavLink to="/reservation" className={getLinkActiveClassName()}>Reservations</NavLink>
+            <NavLink to="/reservation" className={getLinkActiveClassName()} >Reservations</NavLink>
             <NavLink to="order-online" className={getLinkActiveClassName()} >Order online</NavLink>
             
             

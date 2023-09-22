@@ -1,12 +1,7 @@
-@use './partials/highlights.scss';
-@use './partials/hero.scss';
-@use './partials/about.scss';
-@use './partials/testimonials.scss';
-
 @use './sass-variables.scss' as v;
 
 
-#home {
+.home {
   .title {
     font-size: 4.5rem;
     line-height: 3.5rem;

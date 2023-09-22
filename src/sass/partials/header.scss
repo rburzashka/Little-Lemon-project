@@ -118,6 +118,7 @@
 
         .pages-nav {
             display: flex;
+            visibility: hidden;
             gap: 25px;
             justify-content: flex-start;
             align-items: flex-end;
@@ -146,6 +147,7 @@
 
         &.menu-opened .pages-nav{
             transform: translateX(0%);
+            visibility: visible;
         }
 
         &.btn-visible .pages-nav {

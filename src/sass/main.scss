@@ -6,14 +6,42 @@ html, body, #root {
 }
 body {
   margin: 0;
-
-  font-family: 'Karla', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  color: var(--color-text);
-  font-size: 1em;
 }
+
+body, button, a, form {
+  font-family: "Karla", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1em;
+  color: var(--color-text);
+}
+#skiptocontent {
+  
+  a {
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    color: white;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-bottom-right-radius: 8px;
+    background: var(--color-theme-call-to-action);
+    -webkit-transition: top .5s ease-out;
+    transition: top .5s ease-out;
+    z-index: 101;
+
+    &:focus {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      outline-color: transparent;
+      -webkit-transition: top .05s ease-in;
+      transition: top .05s ease-in;
+    }
+  }
+}
+
 
 #root {
   overflow-x: hidden;
@@ -39,6 +67,7 @@ main {
 
 a {
   color: inherit;
+  transition: background-color 0.3s;
 }
 
 label {
@@ -47,6 +76,11 @@ label {
 
 a:focus-visible, button:focus-visible {
   outline-offset: 5px;
+}
+nav a {
+  &:focus {
+    outline-offset: 5px;
+  }
 }
 header a, footer a {
   text-decoration: none;
@@ -90,6 +124,13 @@ button {
   &:focus-visible {
     color: var(--color-component-button-hover-text-v1);
   }
+}
+
+a.btn-page {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 

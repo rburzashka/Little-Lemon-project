@@ -5,13 +5,13 @@ import About from "../components/home/About";
 
 import '../sass/home.scss';
 
-export default function Home () {
+export default function Home ({responsive}) {
     return (
-        <main id="home" className="site-main">
+        <main id="main" className="home">
             <Hero/>
             <Highlights/>
             <Testimonials/>
-            <About />
+            <About responsive={responsive}/>
         </main>
     );
 }
