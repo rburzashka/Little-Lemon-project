@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import '../../sass/partials/about.scss';
 
 const aboutImages = [
@@ -12,29 +11,8 @@ const aboutImages = [
     alt: "Little lemon about us 2"}
 ];
 
-export default function About () {
-    const [responsive, setResponsive] = useState(3);
-
-    const onResize = (e) => {
-        if (window.innerWidth < 440) {
-            setResponsive((prev)=>1);
-        } else if (window.innerWidth < 961) {
-            setResponsive((prev)=>2);
-        } else {
-            setResponsive((prev)=>3);
-        }
-    }
-
-    useEffect(() => {
-        onResize();
-
-        window.addEventListener("resize", onResize);
-
-        return () => {
-        window.removeEventListener("resize", onResize)
-        }
+export default function About ({responsive}) {
     
-      }, []);
     return (
         <article id="about">
             <section className={"content-wrapper " + (responsive < 3 ? "wrapper-m" : "")} >

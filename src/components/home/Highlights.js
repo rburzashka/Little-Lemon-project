@@ -75,11 +75,11 @@ export default function Highlights () {
       }, []);
 
     return (
-        <article id="highlights">
+        <div id="highlights">
             <section className="content-wrapper">
                 <div className='section-title-wrapper'>
                     <h1 className="title">This weeks specials</h1>
-                    <button className="btn-page">
+                    <button type="button" className="btn-page">
                         <span>Online menu</span>
                     </button>
                 </div>
@@ -106,6 +106,6 @@ export default function Highlights () {
             
             
             
-        </article>
+        </div>
     );
 }

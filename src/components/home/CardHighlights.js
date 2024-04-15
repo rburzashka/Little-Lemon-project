@@ -19,7 +19,7 @@ export default function CardHighlights ({card}) {
                     </div>
                 </div>
                 <div className="order">
-                    <button className='order-delivery'>
+                    <button type="button" className='order-delivery'>
                         <span>Order a delivery</span> 
                         <Delivery />
                         </button>

@@ -1,12 +1,7 @@
 
 @use './sass-variables.scss' as v;
 
-input, textarea {
-    font-family: "Karla", -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 1em;
-}
-
-#reserve-table {
+.reserve-table {
     margin-top: 50px;
 
     p:empty {
@@ -376,7 +371,7 @@ input, textarea {
 }
 
 @media (min-width: v.$media_break_point_min) {
-    #reserve-table {
+    .reserve-table {
         .wrapper-fields {
             display: flex;
             flex-wrap: wrap;
@@ -390,7 +385,7 @@ input, textarea {
 }
 
 @media (max-width: v.$media_break_point_max) {
-    #reserve-table {
+    .reserve-table {
    
         .content-wrapper {
             padding: 4em 2rem 2em;

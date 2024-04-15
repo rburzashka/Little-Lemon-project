@@ -6,9 +6,9 @@ import '../../sass/partials/hero.scss';
     const heroImage = () => require('../../assets/images/restauranfood.webp');
 
     return(
-        <article id="hero">
-            <section className="content-wrapper flex-col-2">
-                <div className="content colored">
+        <div id="hero">
+            <div className="content-wrapper flex-col-2">
+                <article className="content colored">
                     <h1 className="title">Little Lemon</h1>
                     <h2 className="subtitle">Chicago</h2>
                     <div className="text">
@@ -16,17 +16,15 @@ import '../../sass/partials/hero.scss';
                             tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                     
-                    <NavLink to="/reservation" className={({ isActive }) => (isActive ? "active-link" : "")}>
-                        <button className="btn-page">
-                            <span>Reserve a table</span>
-                        </button>
+                    <NavLink to="/reservation" className={({ isActive }) => (isActive ? "active-link" : "") + " btn-page"}>
+                        <span>Reserve a table</span>
                     </NavLink>
                     
-                </div>
+                </article>
                 <div className="image">
-                    <img src={heroImage()} alt="" />
+                    <img src={heroImage()} alt="Lorem ipsum dolor sit amet" />
                 </div>
-            </section>
-        </article>
+            </div>
+        </div>
     );
  }

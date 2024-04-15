@@ -42,10 +42,10 @@ const customers = [
 
 export default function Testimonials () {
     return (
-        <article id="testimonials">
-            <div className="content-wrapper" >
+        <div id="testimonials">
+            <section className="content-wrapper" >
             <h1 className='title'>Testimonials</h1>
-            <div id="wrapper-cards" >
+            <div id="wrapper-cards">
                 {customers.map( (card, index) => {
                         return (
                             <CardTestimonials 
@@ -56,7 +56,7 @@ export default function Testimonials () {
             </div>
                 
 
-            </div>
-        </article>
+            </section>
+        </div>
     );
 }

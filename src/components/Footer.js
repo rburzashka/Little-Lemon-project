@@ -26,15 +26,16 @@ export default function Footer({children}) {
   ];
 
   return (
-    <footer id="site-footer">
-      <section className="content-wrapper" >
+    <footer id="site-footer" aria-label="Site footer">
+      <div className="content-wrapper" >
 
-        <div id="footer-logo">
+        <div aria-hidden="true" id="footer-logo">
           <Logo />
         </div>
 
         <div className="content">
-          <div>
+
+          <section>
             <h2 className="footer-title">Doormat Navigation</h2>
             <div>
               <div className="pages-nav">
@@ -48,15 +49,18 @@ export default function Footer({children}) {
                 <Outlet />
               </div>
             </div>
-          </div>
-          <div>
+          </section>
+
+
+          <section>
             <h2 className="footer-title">Contact</h2>
             <div>Adress <br />
               phone number<br />
               email
             </div>
-          </div>
-          <div>
+          </section>
+
+          <section>
             <h2 className="footer-title">Social Media Links</h2>
             <div id="social-links">
               {/* Add social media links based on the `socials` data */
@@ -75,10 +79,11 @@ export default function Footer({children}) {
                 })
             }
             </div>
-          </div>
+          </section>
+
         </div>
 
-      </section>
+      </div>
       
     </footer>
   );
