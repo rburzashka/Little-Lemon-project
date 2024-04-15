@@ -3,9 +3,10 @@
 =======
 
 ![alt text]([Reserve table page screenshot](https://github.com/rburzashka/lemon/blob/main/reserve.jpg))
+![alt text]([Reserve table page screenshot table](https://github.com/rburzashka/lemon/blob/main/reserve-table-picked.jpg))
 ![alt text]([Home page screenshot](https://github.com/rburzashka/lemon/blob/main/home.jpg))
 
-<img src="https://github.com/rburzashka/lemon/blob/main/reserve.jpg" style="width:400px">
+<img src="https://github.com/rburzashka/lemon/blob/main/reserve-table-picked.jpg" style="max-width:400px">
 
 # Getting Started with Create React App
 
