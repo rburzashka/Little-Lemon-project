@@ -1,5 +1,4 @@
 import CardTestimonials from './CardTestimonial';
-import '../../sass/partials/testimonials.scss';
 
 const customers = [
     {

@@ -1,7 +1,7 @@
 @use '../sass-variables.scss' as v;
 
 #about {
-  padding: 80px 0;
+  padding: v.$mobile_padding-lr 0;
   
   .title {
     color: var(--color-brand-primary-1);

@@ -19,20 +19,23 @@
     
     .content-wrapper {
       display: flex;
-      gap: 25px;
+      gap: 3em;
       align-items: flex-start;
 
-      &>div {
+      &>div, &>.content {
         width: 50%;
+      }
+
+      &>div {
         position: relative;
       }
     }
     .image img {
       position: absolute;
-      width: 375px;
+      width: 100%;
       max-width: 100%;
       right: 0;
-      top: 1.5rem;
+      top: 1em;
       border-radius: 25px;
     }
     
@@ -51,12 +54,11 @@
         grid-area: main;
       }
       
-      &>div:first-child {
+      &>.content {
         position: relative;
         z-index: 1;
         padding: 2em v.$mobile_padding-lr 1em;
-        background-color: rgba(0,0,0,0.6);
-
+        
         &>* {
           max-width: 400px;
         }
@@ -73,7 +75,8 @@
       }
 
       .btn-page {
-        margin-top: 10%;
+        margin-top: 1em;
+        margin-bottom: 2em;
       }
     }
   }
@@ -85,7 +88,6 @@
           height: inherit;
         }
         &>div:last-child {
-          background-color: #000;
           height: 567px;
         }
         img {

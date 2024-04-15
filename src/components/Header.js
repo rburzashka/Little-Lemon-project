@@ -133,13 +133,7 @@ export default function Header({responsive}) {
           
           <div className="pages-nav">
             <NavLink to="/" className={getLinkActiveClassName()} >Home</NavLink>
-            <NavLink to="/about" className={getLinkActiveClassName()} >About</NavLink>
-            <NavLink to="/menu" className={getLinkActiveClassName()} >Menu</NavLink>
             <NavLink to="/reservation" className={getLinkActiveClassName()} >Reservations</NavLink>
-            <NavLink to="order-online" className={getLinkActiveClassName()} >Order online</NavLink>
-            
-            
-            <Link to="/login">Login</Link>
 
             <Outlet />
           </div>

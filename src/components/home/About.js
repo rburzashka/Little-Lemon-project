@@ -1,5 +1,3 @@
-import '../../sass/partials/about.scss';
-
 const aboutImages = [
     {src: () => require('../../assets/images/about-1.webp'),
      alt: "Little lemon about us 1"},
