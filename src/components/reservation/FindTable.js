@@ -124,6 +124,7 @@ validateForm : f ()*/
     }
 
     return (
+        <>
         <Formik 
             initialValues={ initialValues }
             validationSchema={fieldsEntryData.validationSchema}
@@ -295,6 +296,7 @@ validateForm : f ()*/
                     }
 
                 </div>
+                {(availableTables.length !== 0) &&  <p style={{"color": "#ce3a3a", "font-size": "0.8em"}}>Images were created with "Image Creator from Microsoft Designer"</p>}
                 </div>
             }
                 <div className={"form-btns " + (data.isSubmited ? 'submited' : '')}>
@@ -313,6 +315,8 @@ validateForm : f ()*/
             </Form>
              )}
         </Formik>
+        
+        </>
     );
 }
   export default FindTable;
