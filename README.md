@@ -1,6 +1,12 @@
 <<<<<<< HEAD
 # little-lemon
 =======
+
+![alt text]([Reserve table page screenshot](https://github.com/rburzashka/lemon/blob/main/reserve.jpg))
+![alt text]([Home page screenshot](https://github.com/rburzashka/lemon/blob/main/home.jpg))
+
+<img src="https://github.com/rburzashka/lemon/blob/main/reserve.jpg" style="width:400px">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
