@@ -2,9 +2,9 @@
 # little-lemon
 =======
 
-![alt text]([Reserve table page screenshot](https://github.com/rburzashka/lemon/blob/main/reserve.jpg))
-![alt text]([Reserve table page screenshot table](https://github.com/rburzashka/lemon/blob/main/reserve-table-picked.jpg))
-![alt text]([Home page screenshot](https://github.com/rburzashka/lemon/blob/main/home.jpg))
+([Reserve table page screenshot](https://github.com/rburzashka/lemon/blob/main/reserve.jpg))
+([Reserve table page screenshot table](https://github.com/rburzashka/lemon/blob/main/reserve-table-picked.jpg))
+([Home page screenshot](https://github.com/rburzashka/lemon/blob/main/home.jpg))
 
 <img src="https://github.com/rburzashka/lemon/blob/main/reserve-table-picked.jpg" style="max-width:100%; width: 400px">
 
