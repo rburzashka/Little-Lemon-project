@@ -2,7 +2,10 @@
 # little-lemon
 =======
 
-![alt text]([Isolated.png "Title"](https://github.com/rburzashka/lemon/blob/main/reserve.jpg))
+![alt text]([Reserve table page screenshot](https://github.com/rburzashka/lemon/blob/main/reserve.jpg))
+![alt text]([Home page screenshot](https://github.com/rburzashka/lemon/blob/main/home.jpg))
+
+<img src="https://github.com/rburzashka/lemon/blob/main/reserve.jpg" style="width:400px">
 
 # Getting Started with Create React App
 
